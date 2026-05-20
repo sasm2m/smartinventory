@@ -33,7 +33,7 @@ public class Product {
     @JsonIgnore
     private Integer stock;
     private Boolean active;
-    @Column(name = "is_available")
+    @Column(name = "is_available", nullable = false)
     private String isAvailable;
 
 }

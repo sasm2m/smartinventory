@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ProductRepository extends JpaRepository<Product, Integer> {
+public interface ProductRepository extends JpaRepository<Product, Long> {
     // Vacío — Spring Data JPA genera la implementación en tiempo de ejecución.
     // Métodos ya disponibles sin escribir nada:
     //   findAll()          → SELECT * FROM products

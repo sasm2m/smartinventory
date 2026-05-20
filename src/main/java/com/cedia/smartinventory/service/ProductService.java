@@ -1,4 +1,4 @@
-package main.java.com.cedia.smartinventory.service;
+package com.cedia.smartinventory.service;
 
 import com.cedia.smartinventory.model.Product;
 import com.cedia.smartinventory.repository.ProductRepository;

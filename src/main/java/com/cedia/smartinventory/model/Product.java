@@ -1,14 +1,13 @@
 package com.cedia.smartinventory.model;
 
-import java.beans.Transient;
-import java.lang.annotation.Inherited;
-
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -28,7 +27,6 @@ public class Product {
     private String name;
     @Transient 
     private String description;
-
     private Double price;
     @JsonIgnore
     private Integer stock;

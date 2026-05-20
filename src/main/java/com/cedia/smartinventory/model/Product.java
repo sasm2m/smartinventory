@@ -1,5 +1,15 @@
 package com.cedia.smartinventory.model;
 
+import java.beans.Transient;
+import java.lang.annotation.Inherited;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,13 +19,21 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
+@Table(name = "products")
 public class Product {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    @Transient
     private String description;
+
     private Double price;
+    @JsonIgnore
     private Integer stock;
     private Boolean active;
+    @Column(name = "is_available")
+    private String isAvailable;
 
 }

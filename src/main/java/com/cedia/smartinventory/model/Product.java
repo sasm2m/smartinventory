@@ -26,7 +26,7 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    @Transient
+    @Transient 
     private String description;
 
     private Double price;

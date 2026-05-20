@@ -14,7 +14,7 @@ import java.util.Optional;
 public class ProductController {
 
     // Datos en memoria — temporal, solo para esta sesión
-    private final List<Product> products = List.of(
+    /*private final List<Product> products = List.of(
         Product.builder().id(1L).name("Laptop")
             .description("Laptop de alto rendimiento")
             .price(1200.0).stock(10).active(true).build(),
@@ -24,6 +24,18 @@ public class ProductController {
         Product.builder().id(3L).name("Teclado")
             .description("Teclado mecánico")
             .price(45.0).stock(30).active(true).build()
+    );*/
+    
+     private final List<Product> products = List.of(
+        Product.builder().id(1L).name("Laptop")
+            .description("Laptop de alto rendimiento")
+            .price(1200.0).stock(10).active(true).isAvailable("Yes").build(),
+        Product.builder().id(2L).name("Mouse")
+            .description("Mouse inalámbrico")
+            .price(25.5).stock(50).active(true).isAvailable("Yes").build(),
+        Product.builder().id(3L).name("Teclado")
+            .description("Teclado mecánico")
+            .price(45.0).stock(30).active(true).isAvailable("No").build()
     );
 
     // GET /api/products

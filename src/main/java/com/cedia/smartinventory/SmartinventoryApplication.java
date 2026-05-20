@@ -10,7 +10,7 @@ public class SmartinventoryApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SmartinventoryApplication.class, args);
-		Product laptop = Product.builder()
+		/*Product laptop = Product.builder()
     .id(1L)
     .name("Laptop")
     .description("Laptop de alto rendimiento")
@@ -19,7 +19,7 @@ public class SmartinventoryApplication {
     .active(true)
     .build();
 
-System.out.println(laptop);
+System.out.println(laptop);*/
 	}
 
 }
